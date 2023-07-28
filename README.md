@@ -326,7 +326,7 @@ List of extensions:
 
 ## Things to note: <a id="considerations"></a>
 
-- When there is any changes to the .env file or the docker-compose.dev.yml file, the docker container ckan-dev will be recreated. So any files added through "`docker exec -it <container id> /bin/sh`" will be deleted. 
+- When there is any changes to the .env file or the docker-compose.dev.yml file, the docker container ckan-dev will be recreated. So any files added through "`docker exec -it <container id> /bin/sh`" will be deleted. (Note: to let the files you added not be deleted, add it under 'volumes' in docker-compose.dev.yml)
     - For example, the ClearML credentials that we added when we ran the clearml-init command will be deleted. 
 - To retrieve data from the `ckan.ini` file, add the following code.
     ```
