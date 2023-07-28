@@ -285,7 +285,7 @@ Important files that we looked through:
 >>
 >> After uploading, we call the `change_dataset_title()` function to change the name of our dataset in DataVerse. 
 >>
->> Lastly, we will delete the files that are uploaded to save space in the docker container.
+>> Lastly, we will delete the files (using shutil library in resource.py) that are uploaded to save space in the docker container.
 
 ### /var/lib/ckan Folder <a id="varlibckan"></a>
 
