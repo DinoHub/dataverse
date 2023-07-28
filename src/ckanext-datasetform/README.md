@@ -103,7 +103,7 @@ This extension is used to modify the package and resource creation form.
     This function is used to delete the dataset on ClearML side.
     '''
 
-    class DeleteView(MethodView):
+    class DeletePackageView(MethodView):
     '''
     This class is used to purge datasets. 
     '''
