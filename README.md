@@ -219,7 +219,7 @@ Important files that we looked through:
 - `page.html`
 - `base.html`
 
-> The files that we overwrote are all stored inside the `datasetform` extension.
+> The files that we overwrote are all stored inside the `datasetform` extension (file path:dataverse\src\ckanext-datasetform\ckanext\datasetform\templates) .
 >
 > Did not change many files here as we added our own templates to overwrite the original.
 
