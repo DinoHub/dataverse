@@ -11,7 +11,7 @@ This extension is used to modify the package and resource creation form.
 
     
 **views.py**
-    This plugin contains the classes that are used to overwrite the package / resource creation process. 
+    This plugin contains the classes that are used to overwrite the package / resource creation process. Classes are copied from different .py files in the views folder into this views.py file. Then plugin.py file imports these classes from views.py file.
 ```python
     '''
     Most of the functions in here are directly copied from views/dataset.py and views/resource.py to ensure that the classes would work properly.
