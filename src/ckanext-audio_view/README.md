@@ -21,7 +21,6 @@ When a user uploads an audio file for the preview, this extension is used to dis
 
    `docker compose -f docker-compose.dev.yml up --build`
 
->>** fix this ( Not sure how to fix this tho cos its a CKAN issue not our issue ) **
 * There is a bug in lib/datapreview.py at line 131.
 The string taken from the .env file was not processed, resulting in CKAN being unable to process all added view plugins. I modified the original code here to convert the string into a list to process the default view types.
 
