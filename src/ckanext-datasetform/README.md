@@ -33,6 +33,12 @@ This extension is used to modify the package and resource creation form.
     `parent_datasets` are IDs of datasets that the newly created dataset will inherit from. 
     '''
 
+    add_groups(pkg_dict)
+    '''
+    This function is used to check if `subject_tags` exists in pkg_dict, parse through its value and add each value into `groups` in pkg_dict. 
+    Then using ckan_admin privileges, force add the datasets into the groups (themes).
+    '''
+
     class CreatePackageView(MethodView):
         post(self, package_type)
         '''
@@ -54,11 +60,12 @@ This extension is used to modify the package and resource creation form.
         '''
         I added a portion at line 383, where i retrieved the current existing group list and passed it in as groupList.
         This is for the package form that will display all the groups that user will want to add the current dataset into.
-
         '''
 
     class CreateResourceView(MethodView):
     '''
+    This is not being used. I could not overwrite the original with this as it gave me some issues about being unable to overwrite existing URL points. 
+
     This class is supposed to overwrite the resource form creation portion, but it is not being called. What it is supposed to do is:
 
         Store the uploaded files from the resource form in the folder path `/var/lib/ckan/default`.
@@ -66,11 +73,15 @@ This extension is used to modify the package and resource creation form.
         When the uploaded files are stored here, we will call the `upload_to_clearml` function to upload the files to ClearML. 
 
         After the upload, we will then delete the uploaded files to reduce space wastage. 
-
-    I REMOVED THIS CLASS AS IT IS HARD TO MAINTAIN THIS AND RESOURCE.PY AT THE SAME TIME.
     '''
 
-    class CreatePackageView(MethodView):
+    edit_groups(pkg_dict)
+    '''
+    This function is used to check if `subject_tags` exists in pkg_dict, parse through its value and add each value into `groups` in pkg_dict. 
+    Then using ckan_admin privileges, force add the datasets into the groups (themes).
+    '''
+
+    class EditPackageView(MethodView):
         post(self, package_type)
         '''
         I will explain what we changed from the original `post` function from dataset.py.
@@ -87,9 +98,14 @@ This extension is used to modify the package and resource creation form.
 
         '''
 
+    deleteClearML(package_id)
+    '''
+    This function is used to delete the dataset on ClearML side.
+    '''
+
     class DeleteView(MethodView):
     '''
-    This class is used to delete datasets. 
+    This class is used to purge datasets. 
     '''
         post(self, package_type)
         '''
@@ -167,7 +183,6 @@ This extension is used to modify the package and resource creation form.
     **fix this**
     '''
 ```
-
 
 ## Installation
 

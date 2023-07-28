@@ -436,6 +436,12 @@ class CreatePackageView(MethodView):
         errors: Optional[dict[str, Any]] = None,
         error_summary: Optional[dict[str, Any]] = None,
     ) -> str:
+        """
+        This function is called when its URL endpoint is called. 
+        For this function, it is called when the URL endpoint '/dataset/new' is called.
+
+        Check /views/dataset.py for the documentation.
+        """
         context = self._prepare()
         if data and "type" in data:
             package_type = data["type"]

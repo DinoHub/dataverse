@@ -1,9 +1,9 @@
 [Refer to HaoYi's GitHub for DataVerse for reference i guess](https://github.com/ghy99/DataVerse)
 
-# ckanext-audio_view
+# ckanext-video_view
 
 This extension is used to display video previews in datasets. When a user uploads a video file for the preview, this extension is used to display the video div so that the preview can be played. 
-*taken from github's ckan/ckan under src_extensions.
+***Taken from github's ckan/ckan under src_extensions.***
 
 ## Installation
 
@@ -20,8 +20,7 @@ This extension is used to display video previews in datasets. When a user upload
 
    `docker compose -f docker-compose.dev.yml up --build`
 
-** fix this ( Not sure how to fix this tho cos its a CKAN issue not our issue ) **
-* There is a bug in lib/datapreview.py at line 131.
+- There is a bug in lib/datapreview.py at line 131.
 The string taken from the .env file was not processed, resulting in CKAN being unable to process all added view plugins. I modified the original code here to convert the string into a list to process the default view types.
 
 
