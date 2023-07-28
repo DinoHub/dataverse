@@ -300,8 +300,8 @@ For example, resource files are stored the /resources folder. The names of the f
     [6: ] : file
 
 - Current files stored inside the `/resources` folder are all previews that are uploaded for datasets.
-- Current files stored inside `/storage/uploads/group` stores all group profile images uploaded.
-- Current files stored inside `/storage/uploads/user` stores all user profile images uploaded.
+- Current files stored inside `/storage/uploads/group` stores all group profile images uploaded. (note: 'Organisation' in frontend was changed to 'Projects', 'Group' in frontend was changed to 'All Themes')
+- Current files stored inside `/storage/uploads/user` stores all user profile images uploaded. (when user creates an account)
 
 > Files that will be uploaded to ClearML are stored in a `/default` folder, which will be deleted after the upload is complete. 
 
