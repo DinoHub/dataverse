@@ -47,7 +47,7 @@ This extension is used to modify the package and resource creation form.
         We requested for the file uploaded for the preview parameter and created a resource for this preview. 
         This is necessary to allow users to see the uploaded preview that is used to describe the dataset.
 
-        I added a portion at line 220 that checks for `subject_tags`. 
+        I added a portion at line 132 that checks for `subject_tags`. 
         This is to check for the additional `themes` that the user would want this dataset to be added to. 
         However, I used the default sysadmin credentials to override adding the dataset to groups (themes) as I could not use IAuthFunction to override that process. 
         ** Pls change that part. **
