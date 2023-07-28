@@ -58,7 +58,7 @@ This extension is used to modify the package and resource creation form.
 
         get(self, package_type, data, errors, error_summary)
         '''
-        I added a portion at line 383, where i retrieved the current existing group list and passed it in as groupList.
+        I added a portion at line 488, where i retrieved the current existing group list and passed it in as groupList.
         This is for the package form that will display all the groups that user will want to add the current dataset into.
         '''
 
